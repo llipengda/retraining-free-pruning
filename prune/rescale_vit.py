@@ -45,7 +45,7 @@ def get_mha_lstsq(
     model.eval()
     for teacher_batch, student_batch in zip(teacher_inputs, student_inputs):
         attention_mask = (teacher_batch[1] == 0)
-        student_batch[2] = student_head_mask[layer_idx].view(1, -1, 1, 1)
+        student_batch[1] = student_head_mask[layer_idx].view(1, -1, 1, 1)
 
         # Get the outputs of the teacher model
         with MaskNeurons(model, teacher_neuron_mask):
@@ -110,7 +110,7 @@ def get_ffn_lstsq(
     model.eval()
     for teacher_batch, student_batch in zip(teacher_inputs, student_inputs):
         attention_mask = (teacher_batch[1] == 0)
-        student_batch[2] = student_head_mask[layer_idx].view(1, -1, 1, 1)
+        student_batch[1] = student_head_mask[layer_idx].view(1, -1, 1, 1)
 
         # Get the outputs of the teacher model
         with MaskNeurons(model, teacher_neuron_mask):
@@ -146,7 +146,7 @@ def get_ffn_lstsq(
 
 
 @torch.no_grad()
-def rescale_mask(
+def rescale_mask_vit(
     model,
     config,
     teacher_head_mask,
@@ -154,7 +154,7 @@ def rescale_mask(
     student_head_mask,
     student_neuron_mask,
     dataloader,
-    classification_task=False,
+    classification_task=True,
 ):
     num_hidden_layers = config.num_hidden_layers
     rescaled_head_mask = student_head_mask.clone()
@@ -167,6 +167,7 @@ def rescale_mask(
             teacher_neuron_mask,
             layer_idx,
             prev_inputs=dataloader if layer_idx == 0 else teacher_inputs,
+            is_vit=True
         )
         student_inputs = collect_layer_inputs(
             model,
@@ -174,6 +175,7 @@ def rescale_mask(
             rescaled_neuron_mask,
             layer_idx,
             prev_inputs=dataloader if layer_idx == 0 else student_inputs,
+            is_vit=True
         )
 
         if torch.count_nonzero(student_head_mask[layer_idx]) != 0 and layer_idx != 0:

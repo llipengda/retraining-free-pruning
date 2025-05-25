@@ -1,5 +1,6 @@
 import torch
 from datasets import load_metric
+from tqdm import tqdm
 
 from utils.arch import apply_neuron_mask
 from dataset.glue import target_dev_metric
@@ -12,7 +13,11 @@ def eval_glue_acc(model, head_mask, neuron_mask, dataloader, task_name):
 
     model.eval()
     handles = apply_neuron_mask(model, neuron_mask)
-    for batch in dataloader:
+    
+    # 添加tqdm进度条
+    progress_bar = tqdm(dataloader, desc=f"Evaluating {task_name}")
+    
+    for batch in progress_bar:
         for k, v in batch.items():
             batch[k] = v.to("cuda", non_blocking=True)
 
@@ -25,6 +30,10 @@ def eval_glue_acc(model, head_mask, neuron_mask, dataloader, task_name):
             predictions=predictions,
             references=batch["labels"],
         )
+        
+        # 可选：实时更新进度条描述信息
+        # progress_bar.set_postfix({"batch_size": len(batch["labels"])})
+    
     for handle in handles:
         handle.remove()
 

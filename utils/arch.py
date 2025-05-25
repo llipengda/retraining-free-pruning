@@ -96,6 +96,7 @@ def collect_layer_inputs(
     neuron_mask,
     layer_idx,
     prev_inputs,
+    is_vit=False
 ):
     layers = get_layers(model)
     target_layer = layers[layer_idx]
@@ -118,14 +119,24 @@ def collect_layer_inputs(
         inputs = [list(x) for x in inputs]
     else:
         prev_layer = layers[layer_idx - 1]
+        
+        if is_vit:
+            for batch in prev_inputs:
+                batch[1] = head_mask[layer_idx - 1].view(1, -1, 1, 1)
+                with MaskNeurons(model, neuron_mask):
+                    prev_output = prev_layer(*batch)
 
-        for batch in prev_inputs:
-            batch[2] = head_mask[layer_idx - 1].view(1, -1, 1, 1)
-            with MaskNeurons(model, neuron_mask):
-                prev_output = prev_layer(*batch)
+                batch[0] = prev_output[0]
+                batch[1] = head_mask[layer_idx].view(1, -1, 1, 1)
+                inputs.append(batch)
+        else:
+            for batch in prev_inputs:
+                batch[2] = head_mask[layer_idx - 1].view(1, -1, 1, 1)
+                with MaskNeurons(model, neuron_mask):
+                    prev_output = prev_layer(*batch)
 
-            batch[0] = prev_output[0]
-            batch[2] = head_mask[layer_idx].view(1, -1, 1, 1)
-            inputs.append(batch)
+                batch[0] = prev_output[0]
+                batch[2] = head_mask[layer_idx].view(1, -1, 1, 1)
+                inputs.append(batch)
 
     return inputs
