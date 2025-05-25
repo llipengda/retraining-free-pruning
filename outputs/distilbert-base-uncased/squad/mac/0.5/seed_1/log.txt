@@ -1,0 +1,6 @@
+05/24/2025 19:16:09 - INFO - __main__ - Namespace(ckpt_dir='models/distilbert-base-uncased/squad', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='distilbert-base-uncased', num_samples=2048, output_dir='outputs/distilbert-base-uncased/squad/mac/0.5/seed_1', seed=1, task_name='squad')
+05/24/2025 19:16:09 - INFO - __main__ - Seed number: 1
+05/24/2025 19:18:15 - INFO - __main__ - squad Test accuracy: 85.7342
+05/24/2025 19:18:44 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 19:20:39 - INFO - __main__ - squad Pruning time (s): 144.46337890625
+05/24/2025 19:22:17 - INFO - __main__ - squad Test accuracy: 80.2845

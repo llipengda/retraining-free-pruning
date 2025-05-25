@@ -1,0 +1,8 @@
+05/24/2025 23:53:38 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/qqp', constraint=0.6, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/qqp/mac/0.6/seed_0', seed=0, task_name='qqp')
+05/24/2025 23:53:38 - INFO - __main__ - Seed number: 0
+05/24/2025 23:56:20 - INFO - __main__ - qqp Test accuracy: 0.9100
+05/24/2025 23:56:33 - INFO - __main__ - Pruned Model MAC: 60.00 %
+05/24/2025 23:57:40 - INFO - __main__ - qqp Pruning time (s): 80.47438311576843
+05/24/2025 23:57:54 - WARNING - datasets.load - Using the latest cached version of the dataset since glue couldn't be found on the Hugging Face Hub
+05/24/2025 23:57:54 - WARNING - datasets.packaged_modules.cache.cache - Found the latest cached dataset configuration 'qqp' at /home/pdli/.cache/huggingface/datasets/glue/qqp/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c (last modified on Sat May 24 20:03:53 2025).
+05/25/2025 00:00:13 - INFO - __main__ - qqp Test accuracy: 0.9040

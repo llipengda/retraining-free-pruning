@@ -1,0 +1,12 @@
+05/24/2025 21:56:16 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/squad', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/squad/mac/0.7/seed_0', seed=0, task_name='squad')
+05/24/2025 21:56:16 - INFO - __main__ - Seed number: 0
+05/24/2025 21:59:25 - INFO - __main__ - squad Test accuracy: 88.4807
+05/24/2025 22:00:24 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 22:04:35 - INFO - __main__ - squad Pruning time (s): 310.535817861557
+05/24/2025 22:07:33 - INFO - __main__ - squad Test accuracy: 87.6678
+05/24/2025 22:49:21 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/squad', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/squad/mac/0.7/seed_0', seed=0, task_name='squad')
+05/24/2025 22:49:21 - INFO - __main__ - Seed number: 0
+05/24/2025 22:52:17 - INFO - __main__ - squad Test accuracy: 88.4807
+05/24/2025 22:53:17 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 22:57:30 - INFO - __main__ - squad Pruning time (s): 313.0332090854645
+05/24/2025 23:00:20 - INFO - __main__ - squad Test accuracy: 87.6678

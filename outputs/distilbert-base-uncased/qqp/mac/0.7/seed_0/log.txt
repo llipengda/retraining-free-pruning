@@ -1,0 +1,6 @@
+05/24/2025 20:03:16 - INFO - __main__ - Namespace(ckpt_dir='models/distilbert-base-uncased/qqp', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='distilbert-base-uncased', num_samples=2048, output_dir='outputs/distilbert-base-uncased/qqp/mac/0.7/seed_0', seed=0, task_name='qqp')
+05/24/2025 20:03:16 - INFO - __main__ - Seed number: 0
+05/24/2025 20:05:13 - INFO - __main__ - qqp Test accuracy: 0.8999
+05/24/2025 20:05:20 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 20:05:51 - INFO - __main__ - qqp Pruning time (s): 37.82758545875549
+05/24/2025 20:07:11 - INFO - __main__ - qqp Test accuracy: 0.8971

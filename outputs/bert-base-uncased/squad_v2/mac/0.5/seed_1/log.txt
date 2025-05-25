@@ -1,0 +1,6 @@
+05/24/2025 18:50:24 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/squad_v2', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/squad_v2/mac/0.5/seed_1', seed=1, task_name='squad_v2')
+05/24/2025 18:50:24 - INFO - __main__ - Seed number: 1
+05/24/2025 18:53:31 - INFO - __main__ - squad_v2 Test accuracy: 76.8284
+05/24/2025 18:54:31 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 18:58:23 - INFO - __main__ - squad_v2 Pruning time (s): 291.78028678894043
+05/24/2025 19:01:12 - INFO - __main__ - squad_v2 Test accuracy: 66.9451

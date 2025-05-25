@@ -1,0 +1,6 @@
+05/24/2025 18:33:17 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/qqp', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/qqp/mac/0.5/seed_1', seed=1, task_name='qqp')
+05/24/2025 18:33:17 - INFO - __main__ - Seed number: 1
+05/24/2025 18:35:57 - INFO - __main__ - qqp Test accuracy: 0.9100
+05/24/2025 18:36:08 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 18:37:03 - INFO - __main__ - qqp Pruning time (s): 66.03445100784302
+05/24/2025 18:39:43 - INFO - __main__ - qqp Test accuracy: 0.8949

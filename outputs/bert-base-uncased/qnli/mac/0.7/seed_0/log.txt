@@ -1,0 +1,12 @@
+05/24/2025 21:46:22 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/qnli', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/qnli/mac/0.7/seed_0', seed=0, task_name='qnli')
+05/24/2025 21:46:22 - INFO - __main__ - Seed number: 0
+05/24/2025 21:47:18 - INFO - __main__ - qnli Test accuracy: 0.9141
+05/24/2025 21:47:35 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 21:48:58 - INFO - __main__ - qnli Pruning time (s): 100.77694082260132
+05/24/2025 21:49:35 - INFO - __main__ - qnli Test accuracy: 0.9076
+05/24/2025 22:39:18 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/qnli', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/qnli/mac/0.7/seed_0', seed=0, task_name='qnli')
+05/24/2025 22:39:18 - INFO - __main__ - Seed number: 0
+05/24/2025 22:40:09 - INFO - __main__ - qnli Test accuracy: 0.9141
+05/24/2025 22:40:27 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 22:41:54 - INFO - __main__ - qnli Pruning time (s): 104.10110068321228
+05/24/2025 22:42:37 - INFO - __main__ - qnli Test accuracy: 0.9076

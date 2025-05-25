@@ -1,0 +1,6 @@
+05/24/2025 19:05:23 - INFO - __main__ - Namespace(ckpt_dir='models/distilbert-base-uncased/mnli', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='distilbert-base-uncased', num_samples=2048, output_dir='outputs/distilbert-base-uncased/mnli/mac/0.5/seed_1', seed=1, task_name='mnli')
+05/24/2025 19:05:23 - INFO - __main__ - Seed number: 1
+05/24/2025 19:06:45 - INFO - __main__ - mnli Test accuracy: 0.8211
+05/24/2025 19:06:52 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 19:07:26 - INFO - __main__ - mnli Pruning time (s): 41.17828941345215
+05/24/2025 19:08:16 - INFO - __main__ - mnli Test accuracy: 0.7817

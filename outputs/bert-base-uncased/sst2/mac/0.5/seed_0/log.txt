@@ -1,0 +1,6 @@
+05/24/2025 18:02:35 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/sst2', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/sst2/mac/0.5/seed_0', seed=0, task_name='sst2')
+05/24/2025 18:02:35 - INFO - __main__ - Seed number: 0
+05/24/2025 18:03:16 - INFO - __main__ - sst2 Test accuracy: 0.9358
+05/24/2025 18:03:23 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 18:04:06 - INFO - __main__ - sst2 Pruning time (s): 50.06491446495056
+05/24/2025 18:04:20 - INFO - __main__ - sst2 Test accuracy: 0.9140

@@ -1,0 +1,6 @@
+05/24/2025 20:19:45 - INFO - __main__ - Namespace(ckpt_dir='models/distilbert-base-uncased/sst2', constraint=0.7, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='distilbert-base-uncased', num_samples=2048, output_dir='outputs/distilbert-base-uncased/sst2/mac/0.7/seed_0', seed=0, task_name='sst2')
+05/24/2025 20:19:45 - INFO - __main__ - Seed number: 0
+05/24/2025 20:20:12 - INFO - __main__ - sst2 Test accuracy: 0.9140
+05/24/2025 20:20:15 - INFO - __main__ - Pruned Model MAC: 70.00 %
+05/24/2025 20:20:34 - INFO - __main__ - sst2 Pruning time (s): 22.684470176696777
+05/24/2025 20:20:47 - INFO - __main__ - sst2 Test accuracy: 0.9083

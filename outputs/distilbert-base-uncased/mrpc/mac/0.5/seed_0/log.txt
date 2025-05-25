@@ -1,0 +1,6 @@
+05/24/2025 19:33:31 - INFO - __main__ - Namespace(ckpt_dir='models/distilbert-base-uncased/mrpc', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='distilbert-base-uncased', num_samples=2048, output_dir='outputs/distilbert-base-uncased/mrpc/mac/0.5/seed_0', seed=0, task_name='mrpc')
+05/24/2025 19:33:31 - INFO - __main__ - Seed number: 0
+05/24/2025 19:33:58 - INFO - __main__ - mrpc Test accuracy: 0.8480
+05/24/2025 19:34:05 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 19:34:26 - INFO - __main__ - mrpc Pruning time (s): 27.737677574157715
+05/24/2025 19:34:38 - INFO - __main__ - mrpc Test accuracy: 0.8407

@@ -1,0 +1,6 @@
+05/24/2025 18:28:00 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/mrpc', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/mrpc/mac/0.5/seed_1', seed=1, task_name='mrpc')
+05/24/2025 18:28:00 - INFO - __main__ - Seed number: 1
+05/24/2025 18:28:29 - INFO - __main__ - mrpc Test accuracy: 0.8627
+05/24/2025 18:28:43 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 18:29:54 - INFO - __main__ - mrpc Pruning time (s): 84.58818054199219
+05/24/2025 18:30:06 - INFO - __main__ - mrpc Test accuracy: 0.8235

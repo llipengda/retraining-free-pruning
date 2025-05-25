@@ -1,0 +1,8 @@
+05/24/2025 23:34:42 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/mrpc', constraint=0.6, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/mrpc/mac/0.6/seed_0', seed=0, task_name='mrpc')
+05/24/2025 23:34:42 - INFO - __main__ - Seed number: 0
+05/24/2025 23:50:24 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/mrpc', constraint=0.6, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/mrpc/mac/0.6/seed_0', seed=0, task_name='mrpc')
+05/24/2025 23:50:24 - INFO - __main__ - Seed number: 0
+05/24/2025 23:50:59 - INFO - __main__ - mrpc Test accuracy: 0.8627
+05/24/2025 23:51:12 - INFO - __main__ - Pruned Model MAC: 60.00 %
+05/24/2025 23:52:24 - INFO - __main__ - mrpc Pruning time (s): 85.39741849899292
+05/24/2025 23:52:37 - INFO - __main__ - mrpc Test accuracy: 0.8431

@@ -1,0 +1,6 @@
+05/24/2025 17:22:52 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/mnli', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/mnli/mac/0.5/seed_0', seed=0, task_name='mnli')
+05/24/2025 17:22:52 - INFO - __main__ - Seed number: 0
+05/24/2025 17:24:50 - INFO - __main__ - mnli Test accuracy: 0.8453
+05/24/2025 17:25:06 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 17:26:20 - INFO - __main__ - mnli Pruning time (s): 89.49878931045532
+05/24/2025 17:27:33 - INFO - __main__ - mnli Test accuracy: 0.8086

@@ -1,0 +1,6 @@
+05/24/2025 18:30:08 - INFO - __main__ - Namespace(ckpt_dir='models/bert-base-uncased/qnli', constraint=0.5, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='bert-base-uncased', num_samples=2048, output_dir='outputs/bert-base-uncased/qnli/mac/0.5/seed_1', seed=1, task_name='qnli')
+05/24/2025 18:30:08 - INFO - __main__ - Seed number: 1
+05/24/2025 18:31:06 - INFO - __main__ - qnli Test accuracy: 0.9141
+05/24/2025 18:31:23 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/24/2025 18:32:32 - INFO - __main__ - qnli Pruning time (s): 85.62107872962952
+05/24/2025 18:33:15 - INFO - __main__ - qnli Test accuracy: 0.8763
