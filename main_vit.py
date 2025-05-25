@@ -32,9 +32,8 @@ parser.add_argument("--model_name", type=str, required=True)
 parser.add_argument("--task_name", type=str, required=True, choices=[
     "cifar10",
     "cifar100", 
-    "imagenet",
-    "food101",
-    "oxford_flowers102",
+    "timm/mini-imagenet",
+    "fashion_mnist",
 ])
 parser.add_argument("--ckpt_dir", type=str, required=True)
 parser.add_argument("--output_dir", type=str, default=None)

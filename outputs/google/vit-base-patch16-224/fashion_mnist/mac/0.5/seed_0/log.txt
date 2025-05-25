@@ -1,0 +1,6 @@
+05/25/2025 20:00:57 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/fashion_mnist', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/fashion_mnist/mac/0.5/seed_0', seed=0, task_name='fashion_mnist')
+05/25/2025 20:00:57 - INFO - __main__ - Seed number: 0
+05/25/2025 20:02:24 - INFO - __main__ - fashion_mnist Test accuracy: 0.9539
+05/25/2025 20:03:08 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/25/2025 20:05:00 - INFO - __main__ - fashion_mnist Pruning time (s): 141.8776891231537
+05/25/2025 20:06:23 - INFO - __main__ - fashion_mnist Test accuracy: 0.9316

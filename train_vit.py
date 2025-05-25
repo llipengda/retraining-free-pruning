@@ -15,6 +15,22 @@ import argparse
 label_key_map = {
     "cifar10": "label",
     "cifar100": "fine_label",
+    "fashion_mnist": "label",
+    "timm/mini-imagenet": "label",
+}
+
+eval_key_map = {
+    "cifar10": "test",
+    "cifar100": "test",
+    "fashion_mnist": "test",
+    "timm/mini-imagenet": "validation",
+}
+
+img_key_map = {
+    "cifar10": "img",
+    "cifar100": "img",
+    "fashion_mnist": "image",
+    "timm/mini-imagenet": "image",
 }
 
 
@@ -23,15 +39,18 @@ class ViTTrainer:
         self.model_name = model_name
         self.num_classes = num_classes
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.image_processor = AutoImageProcessor.from_pretrained(model_name, use_fast=True)
-        self.model = None  # 延迟初始化，直到获取类别数
+        self.image_processor = AutoImageProcessor.from_pretrained(model_name)
+        self.model = None
 
     def prepare_dataset(self, dataset_name="cifar10", data_dir=None):
+        self.dataset_name = dataset_name
         self.label_key = label_key_map.get(dataset_name, "label")
-        if dataset_name in ["cifar10", "cifar100", "fashion_mnist"]:
+        eval_key = eval_key_map.get(dataset_name, "test")
+
+        if dataset_name in label_key_map:
             dataset = load_dataset(dataset_name, cache_dir=data_dir)
             train_dataset = dataset["train"]
-            eval_dataset = dataset["test"]
+            eval_dataset = dataset[eval_key]
 
             labels = train_dataset.features[self.label_key].names
             self.id2label = {i: label for i, label in enumerate(labels)}
@@ -57,7 +76,6 @@ class ViTTrainer:
         if self.num_classes is None:
             self.num_classes = len(self.id2label)
 
-        # 初始化模型
         self.model = AutoModelForImageClassification.from_pretrained(
             self.model_name,
             num_labels=self.num_classes,
@@ -73,7 +91,8 @@ class ViTTrainer:
         return train_dataset, eval_dataset
 
     def transform_images(self, examples):
-        images = [Image.fromarray(np.array(img)) for img in examples["img"]]
+        img_key = img_key_map.get(self.dataset_name, "img")
+        images = [Image.fromarray(np.array(img)).convert('RGB') for img in examples[img_key]]
         inputs = self.image_processor(images, return_tensors="pt")
         inputs["labels"] = examples[self.label_key]
         return inputs
@@ -132,8 +151,9 @@ class ViTTrainer:
         model.eval()
 
         if test_images is None:
-            _, eval_dataset = self.prepare_dataset()
-            test_images = [eval_dataset[i]["img"] for i in range(5)]
+            _, eval_dataset = self.prepare_dataset(self.dataset_name)
+            img_key = img_key_map.get(self.dataset_name, "img")
+            test_images = [eval_dataset[i][img_key] for i in range(5)]
 
         predictions = []
         with torch.no_grad():
@@ -151,7 +171,7 @@ class ViTTrainer:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="google/vit-base-patch16-224", help="Hugging Face 模型名")
-    parser.add_argument("--dataset", type=str, default="cifar10", help="数据集名称：cifar10/cifar100/fashion_mnist/custom")
+    parser.add_argument("--dataset", type=str, default="cifar10", help="数据集名称：cifar10/cifar100/fashion_mnist/timm/mini-imagenet/custom")
     parser.add_argument("--data_dir", type=str, default=None, help="自定义数据集路径（imagefolder）")
     parser.add_argument("--num_classes", type=int, default=None, help="分类数（若不指定，将自动推断）")
     parser.add_argument("--output_dir", type=str, default=None, help="输出目录")
@@ -159,9 +179,9 @@ def main():
     parser.add_argument("--batch_size", type=int, default=32, help="每批大小")
     parser.add_argument("--lr", type=float, default=5e-5, help="学习率")
     args = parser.parse_args()
-    
+
     if args.output_dir is None:
-        args.output_dir = f"./models/{args.model.split('/')[-1]}/{args.dataset}"
+        args.output_dir = f"./models/{args.model.split('/')[-1]}/{args.dataset.replace('/', '_')}"
 
     print(f"使用模型: {args.model}，数据集: {args.dataset}")
     trainer = ViTTrainer(model_name=args.model, num_classes=args.num_classes)
