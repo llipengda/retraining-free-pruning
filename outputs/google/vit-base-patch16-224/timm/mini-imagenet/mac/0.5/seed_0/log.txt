@@ -4,3 +4,17 @@
 05/25/2025 19:00:36 - INFO - __main__ - Pruned Model MAC: 50.00 %
 05/25/2025 19:02:36 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 150.9082715511322
 05/25/2025 19:03:53 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5743
+05/25/2025 20:38:06 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, task_name='timm/mini-imagenet')
+05/25/2025 20:38:06 - INFO - __main__ - Seed number: 0
+05/25/2025 20:39:28 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.9602
+05/25/2025 20:40:08 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/25/2025 20:42:16 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 158.41344475746155
+05/25/2025 20:43:36 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5340
+05/25/2025 22:43:08 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, task_name='timm/mini-imagenet')
+05/25/2025 22:43:08 - INFO - __main__ - Seed number: 0
+05/25/2025 23:37:43 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, task_name='timm/mini-imagenet')
+05/25/2025 23:37:43 - INFO - __main__ - Seed number: 0
+05/25/2025 23:39:08 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.9602
+05/25/2025 23:39:48 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/25/2025 23:41:56 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 158.96908378601074
+05/25/2025 23:43:18 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5146
