@@ -52,14 +52,14 @@ def get_mha_lstsq(
             layer(*teacher_batch)
         hidden_states, input_tensor = inputs.pop(0)
         teacher_output = mha_proj.dense(hidden_states) + input_tensor
-        teacher_output = remove_padding(teacher_output, attention_mask)
+        # teacher_output = remove_padding(teacher_output, attention_mask)
 
         # Get the outputs of the student model
         with MaskNeurons(model, student_neuron_mask):
             layer(*student_batch)
         hidden_states, input_tensor = inputs.pop(0)
-        hidden_states = remove_padding(hidden_states, attention_mask)
-        input_tensor = remove_padding(input_tensor, attention_mask)
+        # hidden_states = remove_padding(hidden_states, attention_mask)
+        # input_tensor = remove_padding(input_tensor, attention_mask)
 
         hidden_states = hidden_states.view(-1, num_attention_heads, attention_head_size)
         hidden_states = hidden_states.permute(1, 0, 2)
@@ -130,8 +130,9 @@ def get_ffn_lstsq(
             hidden_states = hidden_states[:, 0, :]
             input_tensor = input_tensor[:, 0, :]
         else:
-            hidden_states = remove_padding(hidden_states, attention_mask)
-            input_tensor = remove_padding(input_tensor, attention_mask)
+            # hidden_states = remove_padding(hidden_states, attention_mask)
+            # input_tensor = remove_padding(input_tensor, attention_mask)
+            pass
 
         hidden_states = hidden_states.t()
         hidden_states = hidden_states.index_select(dim=0, index=nonzero_neurons)
@@ -154,7 +155,7 @@ def rescale_mask_vit(
     student_head_mask,
     student_neuron_mask,
     dataloader,
-    classification_task=True,
+    classification_task=False,
 ):
     num_hidden_layers = config.num_hidden_layers
     rescaled_head_mask = student_head_mask.clone()

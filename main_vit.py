@@ -56,6 +56,9 @@ parser.add_argument("--drop_rearrange", action="store_true",
 parser.add_argument("--drop_rescale", action="store_true",
     help="Whether to skip the rescaling step", default=False
 )
+parser.add_argument("--skip_first_eval", action="store_true",
+    help="Whether to skip the first evaluation before pruning", default=False
+)
 
 
 def main():
@@ -118,8 +121,9 @@ def main():
     full_head_mask = torch.ones(config.num_hidden_layers, config.num_attention_heads).cuda()
     full_neuron_mask = torch.ones(config.num_hidden_layers, config.intermediate_size).cuda()
     
-    test_acc = test_accuracy_vit(model, full_head_mask, full_neuron_mask, image_processor, args.task_name)
-    logger.info(f"{args.task_name} Test accuracy: {test_acc:.4f}")
+    if not args.skip_first_eval:
+        test_acc = test_accuracy_vit(model, full_head_mask, full_neuron_mask, image_processor, args.task_name)
+        logger.info(f"{args.task_name} Test accuracy: {test_acc:.4f}")
 
 
     training_dataset = vision_dataset(
