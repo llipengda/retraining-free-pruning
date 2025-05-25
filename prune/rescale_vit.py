@@ -109,7 +109,7 @@ def get_ffn_lstsq(
 
     model.eval()
     for teacher_batch, student_batch in zip(teacher_inputs, student_inputs):
-        attention_mask = (teacher_batch[1] == 0)
+        # attention_mask = (teacher_batch[1] == 0)
         student_batch[1] = student_head_mask[layer_idx].view(1, -1, 1, 1)
 
         # Get the outputs of the teacher model
@@ -117,6 +117,7 @@ def get_ffn_lstsq(
             layer(*teacher_batch)
         hidden_states, input_tensor = inputs.pop(0)
         teacher_output = ffn2.dense(hidden_states) + input_tensor
+        attention_mask = torch.ones_like(hidden_states[:, :, 0], device=hidden_states.device, dtype=torch.bool)
         if cls_only:
             teacher_output = teacher_output[:, 0, :]
         else:
@@ -130,9 +131,9 @@ def get_ffn_lstsq(
             hidden_states = hidden_states[:, 0, :]
             input_tensor = input_tensor[:, 0, :]
         else:
-            # hidden_states = remove_padding(hidden_states, attention_mask)
-            # input_tensor = remove_padding(input_tensor, attention_mask)
-            pass
+            hidden_states = remove_padding(hidden_states, attention_mask)
+            input_tensor = remove_padding(input_tensor, attention_mask)
+            # pass
 
         hidden_states = hidden_states.t()
         hidden_states = hidden_states.index_select(dim=0, index=nonzero_neurons)
