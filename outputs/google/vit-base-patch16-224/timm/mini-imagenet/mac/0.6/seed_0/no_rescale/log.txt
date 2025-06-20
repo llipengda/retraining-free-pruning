@@ -1,0 +1,5 @@
+06/20/2025 21:49:50 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.6, drop_rearrange=False, drop_rescale=True, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.6/seed_0/no_rescale', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+06/20/2025 21:49:50 - INFO - __main__ - Seed number: 0
+06/20/2025 21:50:49 - INFO - __main__ - Pruned Model MAC: 60.00 %
+06/20/2025 21:50:57 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 52.69031596183777
+06/20/2025 21:53:05 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.7916

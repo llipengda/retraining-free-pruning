@@ -1,0 +1,10 @@
+05/26/2025 01:54:54 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/fashion_mnist', constraint=0.6, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/fashion_mnist/mac/0.6/seed_0', seed=0, skip_first_eval=False, task_name='fashion_mnist')
+05/26/2025 01:54:54 - INFO - __main__ - Seed number: 0
+05/26/2025 01:55:09 - WARNING - datasets.load - Using the latest cached version of the dataset since fashion_mnist couldn't be found on the Hugging Face Hub
+05/26/2025 01:55:09 - WARNING - datasets.packaged_modules.cache.cache - Found the latest cached dataset configuration 'fashion_mnist' at /home/pdli/.cache/huggingface/datasets/fashion_mnist/fashion_mnist/0.0.0/531be5e2ccc9dba0c201ad3ae567a4f3d16ecdd2 (last modified on Sun May 25 19:16:47 2025).
+05/26/2025 01:56:19 - INFO - __main__ - fashion_mnist Test accuracy: 0.9539
+05/26/2025 01:56:41 - WARNING - datasets.load - Using the latest cached version of the dataset since fashion_mnist couldn't be found on the Hugging Face Hub
+05/26/2025 01:56:41 - WARNING - datasets.packaged_modules.cache.cache - Found the latest cached dataset configuration 'fashion_mnist' at /home/pdli/.cache/huggingface/datasets/fashion_mnist/fashion_mnist/0.0.0/531be5e2ccc9dba0c201ad3ae567a4f3d16ecdd2 (last modified on Sun May 25 19:16:47 2025).
+05/26/2025 01:57:11 - INFO - __main__ - Pruned Model MAC: 60.00 %
+05/26/2025 01:59:35 - INFO - __main__ - fashion_mnist Pruning time (s): 174.33036828041077
+05/26/2025 02:00:57 - INFO - __main__ - fashion_mnist Test accuracy: 0.9486

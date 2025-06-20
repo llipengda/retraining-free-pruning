@@ -1,0 +1,5 @@
+06/20/2025 21:25:25 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/cifar10', constraint=0.6, drop_rearrange=True, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/cifar10/mac/0.6/seed_0/no_rearrange', seed=0, skip_first_eval=True, task_name='cifar10')
+06/20/2025 21:25:25 - INFO - __main__ - Seed number: 0
+06/20/2025 21:26:15 - INFO - __main__ - Pruned Model MAC: 60.00 %
+06/20/2025 21:26:15 - INFO - __main__ - cifar10 Pruning time (s): 35.034547567367554
+06/20/2025 21:28:04 - INFO - __main__ - cifar10 Test accuracy: 0.9648

@@ -11,3 +11,13 @@
 05/26/2025 01:08:20 - WARNING - datasets.load - Using the latest cached version of the dataset since cifar10 couldn't be found on the Hugging Face Hub
 05/26/2025 01:08:20 - WARNING - datasets.packaged_modules.cache.cache - Found the latest cached dataset configuration 'plain_text' at /home/pdli/.cache/huggingface/datasets/cifar10/plain_text/0.0.0/0b2714987fa478483af9968de7c934580d0bb9a2 (last modified on Sun May 25 06:44:20 2025).
 05/26/2025 01:09:29 - INFO - __main__ - cifar10 Test accuracy: 0.9731
+05/26/2025 05:12:41 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/cifar10', constraint=0.6, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/cifar10/mac/0.6/seed_0', seed=0, skip_first_eval=True, task_name='cifar10')
+05/26/2025 05:12:41 - INFO - __main__ - Seed number: 0
+05/26/2025 05:13:24 - INFO - __main__ - Pruned Model MAC: 60.00 %
+05/26/2025 05:15:07 - INFO - __main__ - cifar10 Pruning time (s): 134.07568740844727
+05/26/2025 05:16:25 - INFO - __main__ - cifar10 Test accuracy: 0.9731
+06/20/2025 21:20:12 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/cifar10', constraint=0.6, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/cifar10/mac/0.6/seed_0', seed=0, skip_first_eval=True, task_name='cifar10')
+06/20/2025 21:20:12 - INFO - __main__ - Seed number: 0
+06/20/2025 21:20:56 - INFO - __main__ - Pruned Model MAC: 60.00 %
+06/20/2025 21:23:00 - INFO - __main__ - cifar10 Pruning time (s): 155.85631895065308
+06/20/2025 21:24:58 - INFO - __main__ - cifar10 Test accuracy: 0.9731

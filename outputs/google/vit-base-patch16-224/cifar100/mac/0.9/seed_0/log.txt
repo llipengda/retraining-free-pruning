@@ -1,0 +1,10 @@
+05/26/2025 02:42:22 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/cifar100', constraint=0.9, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/cifar100/mac/0.9/seed_0', seed=0, skip_first_eval=True, task_name='cifar100')
+05/26/2025 02:42:22 - INFO - __main__ - Seed number: 0
+05/26/2025 02:43:10 - INFO - __main__ - Pruned Model MAC: 90.00 %
+05/26/2025 02:45:48 - INFO - __main__ - cifar100 Pruning time (s): 189.13987731933594
+05/26/2025 02:47:09 - INFO - __main__ - cifar100 Test accuracy: 0.9213
+05/26/2025 04:24:31 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/cifar100', constraint=0.9, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=4096, output_dir='outputs/google/vit-base-patch16-224/cifar100/mac/0.9/seed_0', seed=0, skip_first_eval=True, task_name='cifar100')
+05/26/2025 04:24:31 - INFO - __main__ - Seed number: 0
+05/26/2025 04:25:47 - INFO - __main__ - Pruned Model MAC: 90.00 %
+05/26/2025 04:30:47 - INFO - __main__ - cifar100 Pruning time (s): 361.94841265678406
+05/26/2025 04:32:08 - INFO - __main__ - cifar100 Test accuracy: 0.9207

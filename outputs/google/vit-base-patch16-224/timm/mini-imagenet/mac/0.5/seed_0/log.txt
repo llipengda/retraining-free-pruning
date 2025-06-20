@@ -18,3 +18,33 @@
 05/25/2025 23:39:48 - INFO - __main__ - Pruned Model MAC: 50.00 %
 05/25/2025 23:41:56 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 158.96908378601074
 05/25/2025 23:43:18 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5146
+05/26/2025 02:50:56 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 02:50:56 - INFO - __main__ - Seed number: 0
+05/26/2025 02:51:39 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/26/2025 02:52:17 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 70.78087186813354
+05/26/2025 02:52:30 - WARNING - datasets.load - Using the latest cached version of the dataset since timm/mini-imagenet couldn't be found on the Hugging Face Hub
+05/26/2025 02:52:30 - WARNING - datasets.packaged_modules.cache.cache - Found the latest cached dataset configuration 'default' at /home/pdli/.cache/huggingface/datasets/timm___mini-imagenet/default/0.0.0/bd8779f9d33c061ea6e75fdd3bce4e43dd679060 (last modified on Sun May 25 18:25:07 2025).
+05/26/2025 02:53:40 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5285
+05/26/2025 02:54:44 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=4096, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 02:54:44 - INFO - __main__ - Seed number: 0
+05/26/2025 02:56:49 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=4096, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 02:56:49 - INFO - __main__ - Seed number: 0
+05/26/2025 02:58:00 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/26/2025 03:01:09 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 250.43407440185547
+05/26/2025 03:02:30 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.6562
+05/26/2025 03:03:55 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=2048, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 03:03:55 - INFO - __main__ - Seed number: 0
+05/26/2025 03:04:35 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/26/2025 03:05:13 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 69.2326991558075
+05/26/2025 03:06:31 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.5285
+05/26/2025 03:07:52 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=6144, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 03:07:52 - INFO - __main__ - Seed number: 0
+05/26/2025 03:09:33 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/26/2025 03:16:53 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 531.7584292888641
+05/26/2025 03:22:36 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=4096, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 03:22:37 - INFO - __main__ - Seed number: 0
+05/26/2025 03:23:51 - INFO - __main__ - Namespace(ckpt_dir='models/vit-base-patch16-224/timm_mini-imagenet', constraint=0.5, drop_rearrange=False, drop_rescale=False, ffn_lut=None, gpu=0, metric='mac', mha_lut=None, model_name='google/vit-base-patch16-224', num_samples=4096, output_dir='outputs/google/vit-base-patch16-224/timm/mini-imagenet/mac/0.5/seed_0', seed=0, skip_first_eval=True, task_name='timm/mini-imagenet')
+05/26/2025 03:23:51 - INFO - __main__ - Seed number: 0
+05/26/2025 03:25:19 - INFO - __main__ - Pruned Model MAC: 50.00 %
+05/26/2025 03:28:29 - INFO - __main__ - timm/mini-imagenet Pruning time (s): 250.9019091129303
+05/26/2025 03:29:46 - INFO - __main__ - timm/mini-imagenet Test accuracy: 0.6562
