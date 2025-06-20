@@ -1,5 +1,15 @@
 # A Fast Post-Training Pruning Framework for Transformers
 
+Based on the paper [A Fast Post-Training Pruning Framework for Transformers](https://arxiv.org/abs/2204.09656) and original code,
+we implement the  post-training pruning framework for Vision Transformers (ViTs) and hard pruning based on the generated masks.
+
+- All the files ending with `_vit` are implemented for ViTs.
+- `hardprune/` contains the hard pruning code.
+
+---
+
+Original README
+
 Inspired by post-training quantization (PTQ) toolkits, we propose a post-training pruning framework tailored for Transformers.
 Different from existing pruning methods, our framework does not require re-training to retain high accuracy after pruning.
 This makes our method fully automated and 10x-1000x faster in terms of pruning time.
